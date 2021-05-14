@@ -1,34 +1,30 @@
-h5 {
-    font-size: 12pt;
-    font-weight: bold;
+
+h5{
+  font-size: 12pt;
+  font-weight: bold;
 }
 
-.lixo {
-    width: 190px;
-    height: 190px;
+.lixo{
+  width: 190px;
+  height: 190px;
 }
-
-.limpeza {
-    width: 198px;
-    height: 188px;
+.limpeza{
+  width: 198px;
+  height: 188px;
 }
-
-.latas {
-    width: 159px;
-    height: 188px;
+.latas{
+  width: 159px;
+  height: 188px;
 }
-
-.oleo {
-    width: 124px;
-    height: 160px;
+.oleo{
+  width: 124px;
+  height: 160px;
 }
-
-.papel {
-    width: 125px;
-    height: 160px;
+.papel{
+  width: 125px;
+  height: 160px;
 }
-
-.vidro {
-    width: 154px;
-    height: 160px;
+.vidro{
+  width: 154px;
+  height: 160px;
 }

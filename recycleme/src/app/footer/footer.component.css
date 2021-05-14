@@ -1,15 +1,12 @@
-.footer-conteudo {
-    display: flex;
-    justify-content: center;
+
+.footer-div {
+    margin-top: 60px;
 }
 
 .footer-lista {
     list-style: none;
     color: #41566b;
-}
-
-.img-thumbnail {
-    border: none;
+    
 }
 
 .fab {

@@ -9,14 +9,15 @@ import { ProdutoService } from '../service/produto.service';
 @Component({
   selector: 'app-cadastrar-produto',
   templateUrl: './cadastrar-produto.component.html',
-  styleUrls: ['./cadastrar-produto.component.css'],
+  styleUrls: ['./cadastrar-produto.component.css']
 })
 export class CadastrarProdutoComponent implements OnInit {
-  produto: Produto = new Produto();
-  usuario: Usuario = new Usuario();
-  categoria: string;
-  idUser = environment.id;
-  categorias: string[] = ['METAL', 'PAPEL', 'PLASTICO', 'VIDRO', 'MADEIRA'];
+
+  produto: Produto = new Produto()
+  usuario: Usuario = new Usuario() 
+  categoria: string
+  idUser = environment.id
+  categorias: string[] = ['METAL','PAPEL','PLASTICO','VIDRO','MADEIRA']
 
   constructor(
     private produtoService: ProdutoService,
@@ -24,6 +25,7 @@ export class CadastrarProdutoComponent implements OnInit {
     private alertas: AlertasService
 
   ) { }
+
   ngOnInit() {
     window.scroll(0,0)
 
@@ -37,13 +39,18 @@ export class CadastrarProdutoComponent implements OnInit {
     this.categoria = event.target.value
   }
 
+
   registrar(){
     this.produto.categoria = this.categoria
+    console.log(this.idUser)
+    console.log(this.produto)
     this.produtoService.registrar(this.produto, this.idUser).subscribe((resp: Produto) =>{
       this.produto = resp
-      this.router.navigate(['/homeLogin])
+      this.router.navigate(['/detalhe'])
       this.alertas.showAlertSuccess('Produto registrado com sucesso!')
     })
 
+    console.log(this.registrar)
   }
+  
 }

@@ -44,18 +44,18 @@ export class HomeLoginComponent implements OnInit {
       alert("Você precisa estar logado para cadastrar produto! Sua sessão deve ter sido encerrada, efetue login novamente")
     }
     this.findByIdUser();
+  
   }
 
   findByIdUser() {
-    this.authService
-      .getByIdUser(this.idUsuarioLogin)
-      .subscribe((resp: Usuario) => {
+    this.authService.getByIdUser(this.idUsuarioLogin).subscribe((resp: Usuario) => {
         this.usuario = resp;
       });
   }
   showModal(id: number) {
     this.idProduto = id;
-    this.findByProdutoId();
+    this.findByProdutoId()
+    console.log(this.produto)
   }
   apagar() {
     this.produtoService.deleteProduto(this.idProduto).subscribe(() => {
@@ -69,18 +69,19 @@ export class HomeLoginComponent implements OnInit {
   }
 
   atualizar(){
+    console.log(this.produto)
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto)=>{
+      console.log(this.produto)
       this.produto = resp
       this.alertas.showAlertSuccess('Produto atualizado com sucesso')
       this.findByIdUser()
     })
   }
 
-  findByProdutoId() {
-    this.produtoService
-      .getByIdProduto(this.idProduto)
-      .subscribe((resp: Produto) => {
-        this.produto = resp;
-      });
+  findByProdutoId(){
+    this.produtoService.getByIdProduto(this.idProduto).subscribe((resp: Produto)=>{
+      this.produto = resp
+    })
   }
+
 }

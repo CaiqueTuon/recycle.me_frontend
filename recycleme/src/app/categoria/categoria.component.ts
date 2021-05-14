@@ -7,14 +7,15 @@ import { AuthService } from '../service/auth.service';
 @Component({
   selector: 'app-categoria',
   templateUrl: './categoria.component.html',
-  styleUrls: ['./categoria.component.css'],
+  styleUrls: ['./categoria.component.css']
 })
 export class CategoriaComponent implements OnInit {
-  produto: Produto = new Produto();
-  listaProduto: Produto[];
+
+  produto: Produto = new Produto()
+  listaProduto: Produto[]
 
   avaliacao: Avaliacao = new Avaliacao();
-  listaAvaliacao: Avaliacao[];
+  listaAvaliacao: Avaliacao[]  
 
   categoria: string
   categorias = ['METAL','PAPEL','PLASTICO','VIDRO', 'MADEIRA']
@@ -22,7 +23,7 @@ export class CategoriaComponent implements OnInit {
   constructor(
     private produtoService: ProdutoService,
     public auth: AuthService
-  ) {}
+  ){ }
   ngOnInit() {
     window.scroll(0,0)
     this.findAllProduto()

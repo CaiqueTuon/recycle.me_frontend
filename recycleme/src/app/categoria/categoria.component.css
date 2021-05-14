@@ -171,11 +171,11 @@ input[type="checkbox"] {
     }
 }
 
-.aplicar {
-    background: rgba(187, 234, 210, 0.62);
+.aplicar{
+    background-color: rgba(36, 191, 60, 0.62)
 }
 
-.cancelar {
+.cancelar{
     color: white;
     background-color: #fa8376;
 }

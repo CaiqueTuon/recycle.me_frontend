@@ -7,7 +7,7 @@
 <div class="row mt-5 mb-5">
     <div class="col-1"></div>
     <div class="col-6">
-        <img class="img-coluna" src="{{produto.foto}}" alt="Foto do Produto">
+        <img class="img-coluna" src="{{produto.foto}}" alt="Fodo do Produto">
     </div>
 
     <div class="col4 padrao-font-color">
@@ -16,20 +16,18 @@
             <span>Localização</span>
             <div class="d-flex mt-3">
                 <div class="mr-5 ml-3">
-                    <h6>Bairro: </h6>
-                    <h6>{{produto.usuario?.bairro}}</h6>
+                    <h6>Bairro: </h6><h6>{{produto.usuario?.bairro}}</h6>
                 </div>
                 <div>
-                    <h6>CEP: </h6>
-                    <h6>{{produto.usuario?.cep}}</h6>
+                    <h6>CEP: </h6><h6>{{produto.usuario?.cep}}</h6>
                 </div>
             </div>
-
+           
         </div>
         <span>Entrar em contato</span>
         <div class="pt-3 pl-4 d-flex">
             <a href="https://wa.me/55{{produto.usuario?.telefone}}" target="_blank"><img class="img-contato hvr-grow mr-3" src="https://i.imgur.com/AeiK9eQ.png" alt="Imagem Whatsapp" (mouseover)="changeText=true" (mouseout)="changeText=false"></a>
-            <div>
+            <div >
                 <span *ngIf="!changeText">Clique no ícone para conversar com {{produto.usuario?.nome}}</span>
                 <span *ngIf="changeText">O número é: {{produto.usuario?.telefone}}</span>
             </div>
