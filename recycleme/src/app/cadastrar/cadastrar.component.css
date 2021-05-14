@@ -7,7 +7,7 @@
 
 span {
     font-size: 12px;
-    color: #41566b;
+    color: #41566B;
 }
 
 input {
@@ -15,7 +15,7 @@ input {
 }
 
 .enviar {
-    background-color: rgba(36, 191, 60, 0.62);
+    background-color: rgba(36, 191, 60, 0.62)
 }
 
 .cancelar {
@@ -24,7 +24,7 @@ input {
 }
 
 #img-bg {
-    background: url("https://raw.githubusercontent.com/ySodias/recycle.me_frontend/develop/recycleme/src/assets/img/TelaLoginProjetoAGORAVAI.svg");
+    background: url('https://raw.githubusercontent.com/ySodias/recycle.me_frontend/develop/recycleme/src/assets/img/TelaLoginProjetoAGORAVAI.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,6 +57,6 @@ input {
 
 .fontf {
     font-size: 35pt;
-    color: #41566b;
-    line-height: 30px;
+    color: #41566B;
+    line-height: 30px
 }

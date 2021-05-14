@@ -27,7 +27,7 @@
                 <tbody>
                     <tr class="card-produtos" *ngFor="let produto of listaProduto">
                         <th scope="row" class="">
-                            <img class="img-card" src="{{produto.foto}}" alt="Foto do produto" />
+                            <img class="img-card" src="{{produto.foto}}" alt="Garrafas PET" />
                         </th>
                         <td>
                             <h4>{{produto.nome}}</h4>
@@ -38,7 +38,8 @@
                         <td class="mais-detalhes">
                             <h4>R$ {{produto.preco}}</h4>
 
-                            <button class="btn-detalhes hvr-grow padrao-font-color" [routerLink]="['/detalhe', produto.id]">
+                            <button class="btn-detalhes hvr-grow padrao-font-color"
+                                [routerLink]="['/detalhe', produto.id]">
 
                                 Mais detalhes
                                 <i class="fa fa-arrow-right" aria-hidden="true"></i>

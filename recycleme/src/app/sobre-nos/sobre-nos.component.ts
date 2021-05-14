@@ -12,7 +12,7 @@ export class SobreNosComponent implements OnInit {
     public auth: AuthService
   ) { }
 
-  ngOnInit(){
-    window.scroll(0, 0);
+  ngOnInit(): void {
   }
+
 }

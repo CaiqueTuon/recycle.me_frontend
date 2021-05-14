@@ -7,7 +7,7 @@ img {
 
 .help-block {
     font-size: 12px;
-    color: #41566b;
+    color: #41566B;
 }
 
 
@@ -22,22 +22,12 @@ select {
 }
 
 .cadastrar {
-    background-color: rgba(36, 191, 60, 0.62);
-}
-
-.cadastrar:hover {
-    background-color: rgba(36, 191, 60, 1);
-    transition: 0.5s;
+    background-color: rgba(36, 191, 60, 0.62)
 }
 
 .cancelar {
     color: rgba(209, 209, 209, 1);
-    background-color: rgba(65, 86, 107, 1);
-}
-
-.cancelar:hover {
-    background-color: rgba(65, 86, 107, 0.8);
-    transition: 0.5s;
+    background-color: rgba(65, 86, 107, 1)
 }
 
 @media only screen and (max-height: 766px) {
@@ -49,8 +39,16 @@ select {
     }
 }
 
-@media only screen and (min-width: 330px) and (max-width: 769px) {
-    .img-cadastro-produto {
-        display: none;
+
+/*
+  Mudanças para Tela Full Hd
+*/
+
+@media only screen and (min-height: 900px) {
+    .titulo {
+        margin-left: 110px;
+    }
+    .col-form input {
+        width: 283px;
     }
 }

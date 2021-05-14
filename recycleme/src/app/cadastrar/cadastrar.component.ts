@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Usuario } from '../model/Usuario';
 import { AlertasService } from '../service/alertas.service';
@@ -13,24 +8,29 @@ import { AuthService } from '../service/auth.service';
 @Component({
   selector: 'app-cadastrar',
   templateUrl: './cadastrar.component.html',
-  styleUrls: ['./cadastrar.component.css'],
+  styleUrls: ['./cadastrar.component.css']
 })
 export class CadastrarComponent implements OnInit {
-  usuario: Usuario = new Usuario();
-  confirmarSenha: string;
+
+  usuario:Usuario = new Usuario
+  confirmarSenha:string
+
 
   constructor(
     private authService:AuthService,
     private router:Router,
+    private formBuider: FormBuilder,
     private alertas: AlertasService
+
   ) { }
 
-  ngOnInit() {
-    window.scroll(0, 0);
+  ngOnInit(){
+    window.scroll(0,0)
+    
   }
 
-  confirmSenha(event: any) {
-    this.confirmarSenha = event.target.value;
+  confirmSenha(event:any){
+    this.confirmarSenha = event.target.value
   }
 
   cadastrar(){
@@ -48,8 +48,16 @@ export class CadastrarComponent implements OnInit {
       this.alertas.showAlertInfo('É necessário preencher todos os dados corretamente.')
     }else{
       this.alertas.showAlertSuccess('Usuario cadastrado com sucesso!')
-      }
-    };
+    }
   }
-}
+
+    
+  }
+
+  
+
+  
+ 
+
+
 }
